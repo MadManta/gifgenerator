@@ -1,0 +1,17 @@
+.design {
+margin:10px;
+
+}
+
+.item {
+    display:inline-block;
+    clear:both;
+    margin:20px;
+    border: 1px solid gray;
+    padding:5px;
+    box-shadow: 4px 4px 4px lightgray;
+}
+
+p {
+    text-align:center;
+}
