@@ -46,11 +46,11 @@ $(document).on("click", ".design", function() {
                 var gifDiv = $("<div class='item'>");
                 var rating = results[i].rating;
                 var searchImage = $("<img class='loaded' data-state='still'>");
+                var stillURL = results[i].images.fixed_height_still.url;
+                var animateURL = results[i].images.fixed_height.url;
                 searchImage.attr("data-still", stillURL);
                 searchImage.attr("data-animate", animateURL);
                 searchImage.attr("src", results[i].images.fixed_height_still.url);
-                var stillURL = results[i].images.fixed_height_still.url;
-                var animateURL = results[i].images.fixed_height.url;
 
                 var p = $("<p>").text("Rating: " + rating);
                 
@@ -70,12 +70,12 @@ $(document).on("click", ".design", function() {
 
 $(document).on("click", ".loaded", function() {
     var state = $(this).attr("data-state");
-    if (state === "still") {
+    if (state === "animate") {
+        $(this).attr("data-state","still");
+        $(this).attr("src", $(this).attr("data-still"));
+      } else {
         $(this).attr("data-state","animate");
         $(this).attr("src", $(this).attr("data-animate"));
-    } else {
-      $(this).attr("data-state","still");
-      $(this).attr("src", $(this).attr("data-still"));
     }
   });
 
