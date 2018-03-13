@@ -1,14 +1,16 @@
 
 var searchTerms = [
-    "dog",
-    "cat",
-    "cow",
-    "bird",
-    "snake",
-    "lizard",
-    "dinosaur",
-    "fish",
-    "crab"
+    "garden",
+    "cinemagraph",
+    "greenery",
+    "raining",
+    "thunderstorm",
+    "purring",
+    "sunbathe",
+    "waves",
+    "wind",
+    "clouds",
+    "music notes"
 ]
 
 for (var j = 0; j < searchTerms.length; j++) {
